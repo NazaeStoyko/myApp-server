@@ -39,7 +39,7 @@ app.post("/add_product", async (req, res) => {
   const db = client.db("server");
   const products = db.collection("products");
 
-  const insertedProduct = await products.insertOne({ name, price });
+  const insertedProduct = await products.insertOne({ name, price, avatarUrl});
 
   res.json(insertedProduct);
 });
