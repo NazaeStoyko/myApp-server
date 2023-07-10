@@ -13,7 +13,7 @@ const port = 3001;
 const fs = require("fs")
 
 const corsOptions = {
-  origin: "http://localhost:3002",
+  origin: "https://gamepad-1.onrender.com",
 };
 
 app.use(cors(corsOptions));
@@ -166,7 +166,7 @@ app.post("/delete_product", async (req, res) => {
 
     // const deleted = await products.deleteOne({ _id: new ObjectId(id) });
 
-  
+
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Internal Server Error" });
